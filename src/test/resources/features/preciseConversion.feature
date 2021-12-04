@@ -60,7 +60,7 @@ Feature: Precise Conversion
     Then I see all conversions screen
     Examples:
       | Value |
-      | 1111 |
+      | 98798 |
 
 
 
