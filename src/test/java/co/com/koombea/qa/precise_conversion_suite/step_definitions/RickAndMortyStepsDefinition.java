@@ -6,7 +6,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
 import org.junit.Assert;
 
 public class RickAndMortyStepsDefinition {
@@ -20,7 +19,7 @@ public class RickAndMortyStepsDefinition {
 
     @When("I send a GET request to the endpoint {string}")
     public void iSendAGETRequestToTheEndpointCharacter(String endpoint) {
-      body = rickAndMorty.allCharactersRequest(endpoint);
+        body = rickAndMorty.allCharactersRequest(endpoint);
     }
 
     @When("I send a GET request to the {string} with a specific {string}")
@@ -35,7 +34,7 @@ public class RickAndMortyStepsDefinition {
 
     @Then("I will see a {int} response code")
     public void iWillSeeAResponseCode(Integer responseCode) {
-    body.then().assertThat().statusCode(responseCode);
+        body.then().assertThat().statusCode(responseCode);
     }
 
     @And("I will see character {string} in the response body")
@@ -49,7 +48,7 @@ public class RickAndMortyStepsDefinition {
 
     @And("I will see {string} in the response body")
     public void iWillSeeAllCharactersInTheResponseBody(String totalCharacters) {
-       String actualCount = body.then().extract().path("info.count").toString();
+        String actualCount = body.then().extract().path("info.count").toString();
         Assert.assertEquals(
                 "Count for all characters should be 826",
                 totalCharacters,
