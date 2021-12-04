@@ -1,0 +1,8 @@
+co\com\koombea\qa\precise_conversion\utils\UtilityFunctions.class
+co\com\koombea\qa\precise_conversion\screen\ShowAllScreen.class
+co\com\koombea\qa\precise_conversion\utils\PropertyLoader.class
+co\com\koombea\qa\precise_conversion\screen\FavoriteSectionScreen.class
+co\com\koombea\qa\precise_conversion\screen\SideMenuScreen.class
+co\com\koombea\qa\precise_conversion\api\RickAndMorty.class
+co\com\koombea\qa\precise_conversion\BaseAppium.class
+co\com\koombea\qa\precise_conversion\screen\ConversionScreen.class
