@@ -14,6 +14,7 @@ import io.appium.java_client.android.AndroidElement;
 import org.junit.Assert;
 
 public class PreciseConversionStepsDefinition {
+
     BaseAppium appium = new BaseAppium();
     AndroidDriver<AndroidElement> driver;
     SideMenuScreen menuScreen;
@@ -74,7 +75,6 @@ public class PreciseConversionStepsDefinition {
     @Then("I see the {string} is shorter than the original value")
     public void iSeeTheNewInputIsShorterThanTheOriginalValue(String newInputValue) {
         String actualSourceText = conversionScreen.getSourceValue();
-        System.out.println(actualSourceText);
         Assert.assertEquals(actualSourceText, newInputValue);
         appium.tearDown();
     }

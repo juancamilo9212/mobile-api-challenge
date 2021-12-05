@@ -6,6 +6,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import co.com.koombea.qa.precise_conversion.utils.*;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
@@ -24,9 +25,6 @@ public class BaseAppium {
                 loadProperty.getConfigValue("apkName")
         );
 
-        //DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-        //desiredCapabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,60);
-
         DesiredCapabilities clientCapabilities = new DesiredCapabilities();
         clientCapabilities.setCapability(MobileCapabilityType.APP,app.getAbsolutePath());
         clientCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
@@ -34,14 +32,6 @@ public class BaseAppium {
         clientCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME,loadProperty.getConfigValue("deviceName"));
         clientCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"uiautomator2");
         try {
-            /*AppiumServiceBuilder builder = new AppiumServiceBuilder()
-                    .withCapabilities(desiredCapabilities)
-                    .withIPAddress(loadProperty.getConfigValue("IPAddress"))
-                    .usingPort(Integer.parseInt(loadProperty.getConfigValue("Port")));
-
-            service = builder.build();
-            service.start();*/
-
             driver = new AndroidDriver<>(
                     new URL("http://127.0.0.1:4723/wd/hub")
                     ,clientCapabilities

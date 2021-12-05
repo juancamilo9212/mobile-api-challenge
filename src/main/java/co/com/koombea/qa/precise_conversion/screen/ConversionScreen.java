@@ -24,7 +24,8 @@ public class ConversionScreen {
     @AndroidFindBy(className = "android.widget.Spinner")
     List<WebElement> conversionDropDowns;
 
-    @AndroidFindBy(id = "com.ba.universalconverter:id/source_value_placeholder")
+    //TODO improve this locator
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.support.v4.widget.DrawerLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.RelativeLayout[2]/android.widget.HorizontalScrollView/android.widget.LinearLayout/android.widget.TextView")
     WebElement srcTxtField;
 
     //TODO improve this locator

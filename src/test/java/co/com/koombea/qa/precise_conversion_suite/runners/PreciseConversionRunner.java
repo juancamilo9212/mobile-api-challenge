@@ -12,7 +12,9 @@ import org.junit.runner.RunWith;
                 "src/test/resources/features/rickAndMorty.feature"
         },
         glue = "co.com.koombea.qa.precise_conversion_suite.step_definitions",
-        snippets = SnippetType.CAMELCASE
+        plugin = { "pretty", "io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"}
+
 )
 public class PreciseConversionRunner {
+
 }
